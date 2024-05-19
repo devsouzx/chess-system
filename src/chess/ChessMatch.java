@@ -1,6 +1,7 @@
 package chess;
 
 import boardgame.Board;
+import boardgame.Piece;
 import boardgame.Position;
 import chess.pieces.*;
 
@@ -22,23 +23,12 @@ public class ChessMatch {
     return mat;
   }
 
-  private void initialSetup() {
-    board.placePiece(new Rook(board, Color.WHITE), new Position(7, 0));
-    board.placePiece(new Rook(board, Color.WHITE), new Position(7, 7));
-    board.placePiece(new Knight(board, Color.WHITE), new Position(7, 1));
-    board.placePiece(new Knight(board, Color.WHITE), new Position(7, 6));
-    board.placePiece(new Bishop(board, Color.WHITE), new Position(7, 2));
-    board.placePiece(new Bishop(board, Color.WHITE), new Position(7, 5));
-    board.placePiece(new Queen(board, Color.WHITE), new Position(7, 3));
-    board.placePiece(new King(board, Color.WHITE), new Position(7, 4));
+  private void placeNewPiece(char column, int row, Piece piece) {
+    board.placePiece(piece, new ChessPosition(column, row).toPosition());
+  }
 
-    board.placePiece(new Rook(board, Color.WHITE), new Position(0, 0));
-    board.placePiece(new Rook(board, Color.WHITE), new Position(0, 7));
-    board.placePiece(new Knight(board, Color.WHITE), new Position(0, 1));
-    board.placePiece(new Knight(board, Color.WHITE), new Position(0, 6));
-    board.placePiece(new Bishop(board, Color.WHITE), new Position(0, 2));
-    board.placePiece(new Bishop(board, Color.WHITE), new Position(0, 5));
-    board.placePiece(new Queen(board, Color.WHITE), new Position(0, 3));
-    board.placePiece(new King(board, Color.WHITE), new Position(0, 4));
+  private void initialSetup() {
+    placeNewPiece('a', 1, new Rook(board, Color.WHITE));
+    placeNewPiece('e', 1, new King(board, Color.WHITE));
   }
 }

@@ -20,12 +20,12 @@ public class Position {
     this.row = row;
   }
 
-  public void setColumn(Integer column) {
-    this.column = column;
-  }
-
   public Integer getColumn() {
     return column;
+  }
+
+  public void setColumn(Integer column) {
+    this.column = column;
   }
 
   public void setValues(int row, int column) {

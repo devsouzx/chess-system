@@ -49,12 +49,12 @@ public class ChessMatch {
 
   private Piece makeMove(Position source, Position target) {
     Piece p = board.removePiece(source);
-    Piece capturdePiece = board.removePiece(target);
+    Piece capturedPiece = board.removePiece(target);
     board.placePiece(p, target);
-    return capturdePiece;
+    return capturedPiece;
   }
 
-  private void placeNewPiece(char column, int row, Piece piece) {
+  private void placeNewPiece(char column, int row, ChessPiece piece) {
     board.placePiece(piece, new ChessPosition(column, row).toPosition());
   }
 

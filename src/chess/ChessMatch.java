@@ -186,11 +186,28 @@ public class ChessMatch {
   }
 
   private void initialSetup() {
-    placeNewPiece('h', 7, new Rook(board, Color.BLUE));
-    placeNewPiece('d', 1, new Rook(board, Color.BLUE));
+    placeNewPiece('a', 1, new Rook(board, Color.BLUE));
     placeNewPiece('e', 1, new King(board, Color.BLUE));
+    placeNewPiece('h', 1, new Rook(board, Color.BLUE));
+    placeNewPiece('a', 2, new Pawn(board, Color.BLUE));
+    placeNewPiece('b', 2, new Pawn(board, Color.BLUE));
+    placeNewPiece('c', 2, new Pawn(board, Color.BLUE));
+    placeNewPiece('d', 2, new Pawn(board, Color.BLUE));
+    placeNewPiece('e', 2, new Pawn(board, Color.BLUE));
+    placeNewPiece('f', 2, new Pawn(board, Color.BLUE));
+    placeNewPiece('g', 2, new Pawn(board, Color.BLUE));
+    placeNewPiece('h', 2, new Pawn(board, Color.BLUE));
 
-    placeNewPiece('b', 8, new Rook(board, Color.PURPLE));
-    placeNewPiece('a', 8, new King(board, Color.PURPLE));
+    placeNewPiece('a', 8, new Rook(board, Color.PURPLE));
+    placeNewPiece('e', 8, new King(board, Color.PURPLE));
+    placeNewPiece('h', 8, new Rook(board, Color.PURPLE));
+    placeNewPiece('a', 7, new Pawn(board, Color.PURPLE));
+    placeNewPiece('b', 7, new Pawn(board, Color.PURPLE));
+    placeNewPiece('c', 7, new Pawn(board, Color.PURPLE));
+    placeNewPiece('d', 7, new Pawn(board, Color.PURPLE));
+    placeNewPiece('e', 7, new Pawn(board, Color.PURPLE));
+    placeNewPiece('f', 7, new Pawn(board, Color.PURPLE));
+    placeNewPiece('g', 7, new Pawn(board, Color.PURPLE));
+    placeNewPiece('h', 7, new Pawn(board, Color.PURPLE));
   }
 }
